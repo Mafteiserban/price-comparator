@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.model.Discount;
 import org.example.model.Product;
 import org.example.util.CsvReaderUtil;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,14 @@ public class PriceComparatorApplication {
 
        for(Product product:products){
            System.out.println(product);
+       }
+
+        System.out.println("---------------------------------------------------------------------------");
+
+       List<Discount> discounts = CsvReaderUtil.readDiscounts(" kaufland_discounts_2025-05-08.csv");
+
+       for(Discount discount:discounts){
+           System.out.println(discount);
        }
 
     }
