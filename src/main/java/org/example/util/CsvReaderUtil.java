@@ -91,7 +91,7 @@ public class CsvReaderUtil {
                 discounts.add(discount);
             }
         }catch (IOException | NullPointerException e){
-            System.err.println("Error reading the file" + fileName + ": " + e.getMessage());
+            System.err.println("Error reading the file " + fileName + ": " + e.getMessage());
         }
 
 
